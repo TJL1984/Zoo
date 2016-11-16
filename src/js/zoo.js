@@ -28,16 +28,16 @@
     Animal.apply(this, [name, birthDate]);
   }
 
+  // Need to create tiger prototype
 Tiger.prototype = Object.create(Animal.prototype);
 Tiger.prototype.constructor = Tiger;
-
 Tiger.prototype.sprint = function sprint(duration) {
   return ("laps");
 }
 
 Tiger.prototype.newBorn = function newBorn() {
   var tigerBaby = new Tiger('baby tiger', 2016);
-  return baby;
+  return newBorn;
 }
 
 var babyTiger = new Animal ('Tigger', 2015)
@@ -46,18 +46,18 @@ var babyTiger = new Animal ('Tigger', 2015)
   console.log(babyTiger.spring() )
 
   function Gorilla(name, birthDate) {
-    Animal.apply(this, [name, birthDate]);
+    Animal.apply(this, [name, birthDate] );
   }
 
+  // Need to create gorilla prototype
 Gorilla.prototype = Object.create(Animal.prototype);
 Gorilla.prototype.constructor = Gorilla;
-
 Gorilla.prototype.climb = function climb(duration) {
   return("treeclimber");
 
 Gorilla.prototype.newBorn = function newBorn() {
   var gorillaBaby = new Gorilla('baby gorilla', 2015);
-  return baby;
+  return newBorn;
 }
 
 var babyGorilla = new Animal ('Kerchak', 2011);
