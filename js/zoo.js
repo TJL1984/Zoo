@@ -18,17 +18,17 @@
     console.log
   }
 
-  var tony = new Animal('Tony', 9)
-    console.log(tony)
+  var Tiger = new Animal('Tony', 2007)
+    console.log(Tiger)
 
-  var harambe = new Animal('Harambe', 16)
-    console.log(harambe)
+  var Gorilla = new Animal('Harambe', 2001)
+    console.log(Gorilla)
 
-  function Tiger (name, birthdate) { // I need to define a property on each prototype.
-
-    Animal.apply( this, [name] );
-      console.log(this, arguments);
-
+  function Tiger(name, birthDate) {
+    Animal.apply(this, [name, birthDate]);
   }
+
+
+
 
 })();
