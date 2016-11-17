@@ -9,6 +9,16 @@
         it('Should confirm namespace is window.zoo', function() {
         expect(window.zoo.Animal).to.be.a('function');
         });
+        it('Should return a TypeError if a string is missing', function() {
+          try {
+            new window.zoo.Animal(5);
+            expect(true).to.be(false);
+          } catch(err) {
+            console.log(typeof err);
+            expect(err).to.be.an.instanceof(TypeError);
+          }
+
+        });
       });
 
 
@@ -35,6 +45,16 @@
           var celebrant = new window.zoo.Tiger('celebrant', 2015);
           expect(celebrant.birthDate).to.be.a('Number');
         });
+        it('should return an error if no number is given', function() {
+          try {
+            new window.zoo.Tiger('hi');
+            expect(true).to.be(false);
+          } catch(err) {
+            console.log(typeof err);
+            expect(err).to.be.an.instanceof(Object);
+            expect(err).to.be.an.instanceof(TypeError);
+          }
+        });
 
     });
 
@@ -47,6 +67,16 @@
         it('The birthDate argument should be a number', function () {
           var celebrant = new window.zoo.Gorilla('celebrant', 2015);
           expect(celebrant.birthDate).to.be.a('Number');
+        });
+        it('should return an error if no string is given', function () {
+          try {
+            new window.zoo.Gorilla('goodbye');
+            expect(true).to.be(false);
+          } catch(err) {
+            console.log(typeof err);
+            expect(err).to.be.an.instanceof(Object);
+            expect(err).to.be.an.instanceof(TypeError);
+          }
         });
 
     });
